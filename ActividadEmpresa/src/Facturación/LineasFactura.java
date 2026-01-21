@@ -2,20 +2,23 @@ package Facturación;
 
 public class LineasFactura {
 	
-	private Articulo articulo;
+	//Atributos
+	private Articulos articulo;
 	private int cantidad = 1;
 	
-	public LineasFactura(Articulo articulo, int cantidad) {
+	//Constructores
+	public LineasFactura(Articulos articulo, int cantidad) {
 		super();
 		this.articulo = articulo;
 		this.cantidad = cantidad;
 	}
 
-	public Articulo getArticulo() {
+	//Getters and Setters
+	public Articulos getArticulo() {
 		return articulo;
 	}
 
-	public void setArticulo(Articulo articulo) {
+	public void setArticulo(Articulos articulo) {
 		this.articulo = articulo;
 	}
 
@@ -26,14 +29,15 @@ public class LineasFactura {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
+	
+	public float calcularImporte() {
+        return articulo.getPrecio() * cantidad;
+    }
 
 	@Override
 	public String toString() {
-		return articulo + " 	cantidad=" + cantidad;
+		return "id = " + articulo.getId() + "	descripción= " + articulo.getDescripcion() + "	Precio Unidad= " + articulo.getPrecio() 
+		+ "	cantidad= " + cantidad + "	Importe= " + calcularImporte();
 	}
-	
-	public float calcularSubtotal() {
-        return articulo.getPrecio() * cantidad;
-    }
 
 }

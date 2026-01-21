@@ -8,7 +8,7 @@ public abstract class Persona {
 	private String telefono = " ";
 	private String correo = " ";
 	
-	//Contructores uno con todo y otro solo con la clave primaria
+	//Creo constructores
 	public Persona(String nombre, String direccion, String telefono, String correo) {
 		//super();
 		this.nombre = nombre;
@@ -21,6 +21,8 @@ public abstract class Persona {
 		//super();
 		this.nombre = nombre;
 	}
+	
+	public Persona () {}
 
 	//Getters and Setters
 	public String getNombre() {

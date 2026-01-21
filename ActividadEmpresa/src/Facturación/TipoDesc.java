@@ -13,6 +13,7 @@ public enum TipoDesc {
 		return descuento;
 	}
 	
+	//Metodo para sacar el descuento con numeros
 	public float devuelveDesc () {
 		return this.descuento;
 	}

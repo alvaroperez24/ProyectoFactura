@@ -15,6 +15,7 @@ public enum TipoIVA {
 		return tasa;
 	}
 	
+	//Metodo para sacar el IVA con numeros
 	public float devuelveIva () {
 		return this.tasa;
 	}
